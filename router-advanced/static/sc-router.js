@@ -99,21 +99,22 @@ class SCRouter extends HTMLElement {
     this._routes.clear();
   }
 
-  createdCallback () {
+  constructor () {
+    super();
     this._onChanged = this._onChanged.bind(this);
     this._routes = new Map();
   }
 
-  attachedCallback () {
+  connectedCallback () {
     window.addEventListener('popstate', this._onChanged);
     this._clearRoutes();
     this._addRoutes();
     this._onChanged();
   }
 
-  detachedCallback () {
+  disconnectedCallback () {
     window.removeEventListener('popstate', this._onChanged);
   }
 }
 
-document.registerElement('sc-router', SCRouter);
+customElements.define('sc-router', SCRouter);

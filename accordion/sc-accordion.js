@@ -34,11 +34,12 @@ class SCAccordion extends HTMLElement {
     return 40;
   }
 
-  createdCallback () {
+  constructor() {
+    super();
     this._panes = null;
   }
 
-  attachedCallback () {
+  connectedCallback () {
     this._panes = this.querySelectorAll('sc-pane');
     this._calculateGeometries();
     this._movePanels();
@@ -47,7 +48,7 @@ class SCAccordion extends HTMLElement {
     requestAnimationFrame(_ => this.setAttribute('active', ''));
   }
 
-  detachedCallback () {
+  disconnectedCallback () {
     this._panes = null;
   }
 
@@ -120,4 +121,4 @@ class SCAccordion extends HTMLElement {
   }
 }
 
-document.registerElement('sc-accordion', SCAccordion);
+customElements.define('sc-accordion', SCAccordion);
