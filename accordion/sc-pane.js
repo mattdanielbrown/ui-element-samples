@@ -35,7 +35,7 @@ class SCPane extends HTMLElement {
     return this._content;
   }
 
-  attachedCallback () {
+  connectedCallback () {
     this.header.addEventListener('click', _ => {
       const customEvent = new CustomEvent('panel-change', {
         bubbles: true
@@ -46,4 +46,4 @@ class SCPane extends HTMLElement {
   }
 }
 
-document.registerElement('sc-pane', SCPane);
+customElements.define('sc-pane', SCPane);

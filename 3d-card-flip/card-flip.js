@@ -103,7 +103,8 @@ class SCFlipCard extends HTMLElement {
         };
   }
 
-  createdCallback () {
+  constructor() {
+    super();
     this._locked = false;
     this._side = SCFlipCard.SIDES.FRONT;
     this._front = this.querySelector('.front');
@@ -126,16 +127,16 @@ class SCFlipCard extends HTMLElement {
     }
   }
 
-  attachedCallback () {
+  connectedCallback () {
     Array.from(this._buttons)
         .forEach(b => {
           b.addEventListener('click', _ => this.flip());
         });
   }
 
-  detachedCallback () {
+  disconnectedCallback () {
 
   }
 }
 
-document.registerElement('sc-card', SCFlipCard);
+customElements.define('sc-card', SCFlipCard);

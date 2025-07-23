@@ -52,4 +52,4 @@ class SCView extends HTMLElement {
   }
 }
 
-document.registerElement('sc-view', SCView);
+customElements.define('sc-view', SCView);
