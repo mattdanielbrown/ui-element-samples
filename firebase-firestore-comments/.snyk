@@ -1,0 +1,34 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - firebase-tools > lodash:
+        patched: '2025-09-07T20:48:17.595Z'
+        id: SNYK-JS-LODASH-567746
+        path: firebase-tools > lodash
+    - firebase-tools > archiver > lodash:
+        patched: '2025-09-07T20:48:17.595Z'
+        id: SNYK-JS-LODASH-567746
+        path: firebase-tools > archiver > lodash
+    - firebase-tools > inquirer > lodash:
+        patched: '2025-09-07T20:48:17.595Z'
+        id: SNYK-JS-LODASH-567746
+        path: firebase-tools > inquirer > lodash
+    - firebase-tools > superstatic > lodash:
+        patched: '2025-09-07T20:48:17.595Z'
+        id: SNYK-JS-LODASH-567746
+        path: firebase-tools > superstatic > lodash
+    - firebase-tools > archiver > archiver-utils > lodash:
+        patched: '2025-09-07T20:48:17.595Z'
+        id: SNYK-JS-LODASH-567746
+        path: firebase-tools > archiver > archiver-utils > lodash
+    - firebase-tools > archiver > async > lodash:
+        patched: '2025-09-07T20:48:17.595Z'
+        id: SNYK-JS-LODASH-567746
+        path: firebase-tools > archiver > async > lodash
+    - firebase-tools > archiver > zip-stream > lodash:
+        patched: '2025-09-07T20:48:17.595Z'
+        id: SNYK-JS-LODASH-567746
+        path: firebase-tools > archiver > zip-stream > lodash
